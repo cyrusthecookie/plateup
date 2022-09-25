@@ -1,24 +1,47 @@
-import logo from './logo.svg';
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+} from 'react-router-dom';
+
+import React from 'react';
 import './App.css';
 
-function App() {
+import Game from './pages/Game';
+// import Welcome from './pages/Welcome';
+// import Register from './pages/Register';
+// import Login from './pages/Login';
+// import Dashboard from './pages/Dashboard';
+// import QuizNew from './pages/QuizNew';
+// import QuizEdit from './pages/QuizEdit';
+// import QuestionAdd from './pages/QuestionAdd';
+// import QuestionEdit from './pages/QuestionEdit';
+// import PlayAdmin from './pages/PlayAdmin';
+// import PlayParticipant from './pages/PlayParticipant';
+// import PlayResults from './pages/PlayResults';
+// import Play from './pages/Play';
+
+function App () {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path='/' element={<Game />} />
+          {/* <Route exact path='/' element={<Welcome />} />
+          <Route path='/register' element={<Register />} />
+          <Route path='/login' element={<Login />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/quiz/new' element={<QuizNew />} />
+          <Route path='/quiz/edit/:quizid' element={<QuizEdit />} />
+          <Route path='/quiz/edit/:quizid/add' element={<QuestionAdd />} />
+          <Route path='/quiz/edit/:quizid/:index' element={<QuestionEdit />} />
+          <Route path='/quiz/play/:quizid/:sessionid' element={<PlayAdmin />} />
+          <Route path='/play/join/:quizid/:sessionid' element={<PlayParticipant />} />
+          <Route path='/play/:name/:quizid/:sessionid' element={<Play />} />
+          <Route path='/play/results/:quizid/:sessionid' element={<PlayResults />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </>
   );
 }
 
