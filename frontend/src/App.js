@@ -7,8 +7,9 @@ import {
 import React from 'react';
 import './App.css';
 
-import Game from './pages/Game';
-// import Welcome from './pages/Welcome';
+import Landing from './pages/Landing';
+import Table from './pages/customer/Table.js';
+import Game from './pages/customer/Game';
 // import Register from './pages/Register';
 // import Login from './pages/Login';
 // import Dashboard from './pages/Dashboard';
@@ -26,7 +27,9 @@ function App () {
     <>
       <BrowserRouter>
         <Routes>
-          <Route exact path='/' element={<Game />} />
+          <Route exact path='/' element={<Landing />} />
+          <Route exact path='/customer/table' element={<Table />} />
+          <Route exact path='/customer/game' element={<Game />} />
           {/* <Route exact path='/' element={<Welcome />} />
           <Route path='/register' element={<Register />} />
           <Route path='/login' element={<Login />} />
