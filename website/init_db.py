@@ -7,6 +7,7 @@ def query_db(query):
     conn = psycopg2.connect(
         host="localhost",
         database="flask_db",
+        user="postgres"
         )
     
     cur = conn.cursor()
